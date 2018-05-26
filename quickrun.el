@@ -330,7 +330,7 @@
 
     ("go/go"  .  ((:command . "go")
                   (:exec    . ((lambda ()
-                                 (if (string-match-p "_test\\.go\\'" (buffer-name))
+                                 (if (string-match-p "_test\\.go\\'" (buffer-file-name))
                                      "%c test %o"
                                    "%c run %o %s %a"))))
                   (:compile-only . "%c build -o /dev/null %s %o %a")
